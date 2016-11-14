@@ -1,0 +1,19 @@
+{
+  "name": "wordpress-starter-theme",
+  "authors": [
+    "Iván Gómez"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Aqua-Resizer": "https://github.com/syamilmj/Aqua-Resizer.git",
+    "jquery_lazyload": "jquery.lazyload#^1.9.7",
+    "bootstrap-sass": "^3.3.7"
+  }
+}

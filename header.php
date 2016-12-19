@@ -39,6 +39,12 @@
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <?php wp_nav_menu(array('theme_location' => 'primary', 'menu_class'=> 'nav navbar-nav')); ?>
+                <form role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>" class="navbar-form navbar-right">
+                    <div class="form-group">
+                        <input class="form-control" type="search" value="<?php echo get_search_query(); ?>" name="s" />
+                    </div>
+                    <button type="submit" class="btn btn-success"><span>Buscar</span></button>
+                </form>
             </div>
         </div>
     </nav>

@@ -117,29 +117,6 @@ function remove_item_toolbar($wp_admin_bar) {
 add_action('admin_bar_menu', 'remove_item_toolbar', 999);
 
 /**
- * Disable default search
- * @param  object  $query The query
- * @param  boolean $error If it has to be redirected to 404 page
- */
-function disable_default_search($query, $error = true) {
-	if (is_admin()) {
-		return;
-	}
-
-	if (is_search()) {
-		$query->is_search = false;
-		$query->query_vars[s] = false;
-		$query->query[s] = false;
-
-		if ($error == true) {
-			$query->is_404 = true;
-		}
-	}
-}
-add_action('parse_query', 'disable_default_search');
-add_filter('get_search_form', create_function('$a', "return null;"));
-
-/**
  * Deregister heartbeat to solve CPU problems
  */
 function deregister_heartbeat() {

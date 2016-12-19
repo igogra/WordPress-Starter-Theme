@@ -5,9 +5,9 @@
 	</header>
 
 <?php
-$counter = 0;
-
 if (have_posts()) :
+	$counter = 0;
+
 	while (have_posts()) : the_post();
 		if ($counter % 2 == 0) :
 ?>

@@ -5,12 +5,12 @@ if (have_posts()) :
 	while (have_posts()) : the_post();
 ?>
 
-		<article>
-			<header>
-				<h1><?php the_title(); ?></h1>
-				<p><?php echo get_the_term_list($id_post, 'custom_taxonomy', '', ', '); ?></p>
-				<p>Published: <?php the_time('d/m/Y'); ?></p>
-			</header>
+<article>
+	<header>
+		<h1><?php the_title(); ?></h1>
+		<p><?php echo get_the_term_list($id_post, 'custom_taxonomy', '', ', '); ?></p>
+		<p>Published: <?php the_time('d/m/Y'); ?></p>
+	</header>
 
 		<?php
 		if (has_post_thumbnail()) :
@@ -20,14 +20,14 @@ if (have_posts()) :
 			$resized_image = aq_resize($image_url, 500, 500, true, true, true);
 		?>
 
-			<img class="lazy img-responsive pull-left thumbnail-post" data-original="<?php echo $resized_image; ?>" alt="<?php the_title(); ?>" width="500" height="500">
+	<img class="lazy img-responsive pull-left thumbnail-post" data-original="<?php echo $resized_image; ?>" alt="<?php the_title(); ?>" width="500" height="500">
 
 		<?php
 		endif;
 		?>
 
 			<?php the_content(); ?>
-		</article>
+</article>
 
 <?php
 	endwhile;

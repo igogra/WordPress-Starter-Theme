@@ -12,14 +12,14 @@ if (have_posts()) :
 		if ($counter % 2 == 0) :
 ?>
 
-		<div class="row">
+	<div class="row">
 
 		<?php
 		endif;
 		?>
 
-			<article class="col-md-6">
-				<div class="thumbnail">
+		<article class="col-md-6">
+			<div class="thumbnail">
 
 		<?php
 		if (has_post_thumbnail()) :
@@ -29,26 +29,26 @@ if (have_posts()) :
 			$resized_image = aq_resize($image_url, 710, 500, true, true, true);
 		?>
 
-					<a href="<?php the_permalink(); ?>"><img class="lazy img-responsive" data-original="<?php echo $resized_image; ?>" alt="<?php the_title(); ?>" width="710" height="500"></a>
+				<a href="<?php the_permalink(); ?>"><img class="lazy img-responsive" data-original="<?php echo $resized_image; ?>" alt="<?php the_title(); ?>" width="710" height="500"></a>
 
 		<?php
 		endif;
 		?>
 
-					<div class="caption">
-						<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-						<p><?php echo get_the_term_list($id_post, 'custom_taxonomy', '', ', '); ?></p>
-						<p class="data">Published: <?php the_time('d/m/Y'); ?></p>
+				<div class="caption">
+					<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+					<p><?php echo get_the_term_list($id_post, 'custom_taxonomy', '', ', '); ?></p>
+					<p class="data">Published: <?php the_time('d/m/Y'); ?></p>
 						<?php the_excerpt(); ?>
-					</div>
 				</div>
-			</article>
+			</div>
+		</article>
 
 		<?php
 		if (($counter + 1) % 2 == 0 || $wp_query->current_post + 1 == $wp_query->post_count) :
 		?>
 
-		</div>
+	</div>
 
 		<?php
 		endif;

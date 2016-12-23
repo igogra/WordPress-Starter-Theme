@@ -6,13 +6,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title><?php bloginfo('name'); ?> <?php wp_title(); ?></title>
 	<link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" href="<?php echo esc_url(home_url('/')); ?>favicon.ico">
-    <link rel="apple-touch-icon" sizes="57x57" href="img/icons/favicon-57.png">
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="img/icons/favicon-57.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/icons/favicon-72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/icons/favicon-114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="img/icons/favicon-120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/icons/favicon-144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="img/icons/favicon-152.png">
+    <link rel="icon apple-touch-icon" sizes="57x57" href="img/icons/favicon-57.png">
+    <link rel="icon apple-touch-icon-precomposed" sizes="57x57" href="img/icons/favicon-57.png">
+    <link rel="icon apple-touch-icon" sizes="72x72" href="img/icons/favicon-72.png">
+    <link rel="icon apple-touch-icon" sizes="114x114" href="img/icons/favicon-114.png">
+    <link rel="icon apple-touch-icon" sizes="120x120" href="img/icons/favicon-120.png">
+    <link rel="icon apple-touch-icon" sizes="144x144" href="img/icons/favicon-144.png">
+    <link rel="icon apple-touch-icon" sizes="152x152" href="img/icons/favicon-152.png">
     <meta name="application-name" content="<?php bloginfo('name'); ?>">
     <meta name="msapplication-TileImage" content="img/icons/favicon-144.png">
     <meta name="msapplication-TileColor" content="#fff">
@@ -41,9 +41,10 @@
                 <?php wp_nav_menu(array('theme_location' => 'primary', 'menu_class'=> 'nav navbar-nav')); ?>
                 <form role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>" class="navbar-form navbar-right">
                     <div class="form-group">
-                        <input class="form-control" type="search" value="<?php echo get_search_query(); ?>" name="s" />
+                        <label class="search-label" for="search">Search</label>
+                        <input id="search" class="form-control" type="search" value="<?php echo get_search_query(); ?>" name="s" />
                     </div>
-                    <button type="submit" class="btn btn-success"><span>Buscar</span></button>
+                    <button type="submit" class="btn btn-success"><span>Search</span></button>
                 </form>
             </div>
         </div>

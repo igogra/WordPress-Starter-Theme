@@ -20,7 +20,7 @@ if (have_posts()) :
 			$resized_image = aq_resize($image_url, 500, 500, true, true, true);
 		?>
 
-	<img class="lazy img-responsive pull-left thumbnail-post" data-original="<?php echo $resized_image; ?>" alt="<?php the_title(); ?>" width="500" height="500">
+	<img class="lazy img-responsive pull-left thumbnail-post" src="<?php echo get_template_directory_uri(); ?>/img/dist/transparent.gif" data-original="<?php echo $resized_image; ?>" alt="<?php the_title(); ?>" width="500" height="500">
 
 		<?php
 		endif;

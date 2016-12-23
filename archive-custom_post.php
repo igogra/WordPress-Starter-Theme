@@ -29,7 +29,7 @@ if (have_posts()) :
 			$resized_image = aq_resize($image_url, 710, 500, true, true, true);
 		?>
 
-				<a href="<?php the_permalink(); ?>"><img class="lazy img-responsive" data-original="<?php echo $resized_image; ?>" alt="<?php the_title(); ?>" width="710" height="500"></a>
+				<a href="<?php the_permalink(); ?>"><img class="lazy img-responsive" src="<?php echo get_template_directory_uri(); ?>/img/dist/transparent.gif" data-original="<?php echo $resized_image; ?>" alt="<?php the_title(); ?>" width="710" height="500"></a>
 
 		<?php
 		endif;

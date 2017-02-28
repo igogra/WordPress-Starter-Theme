@@ -163,5 +163,12 @@ function custom_pagination($html) {
 }
 add_filter('wp_pagenavi', 'custom_pagination', 10, 2);
 
+// Disable default WordPress change password notifications
+if (!function_exists('wp_password_change_notification')) {
+    function wp_password_change_notification($user) {
+    	return;
+    }
+}
+
 require_once get_template_directory() . '/inc/aq_resizer.php';
 ?>
